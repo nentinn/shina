@@ -11,9 +11,11 @@
         header { background-color: #1a1a1e; padding: 15px 0; border-bottom: 2px solid #ff5722; display: flex; justify-content: space-between; align-items: center; }
         .logo { font-size: 1.4rem; font-weight: bold; padding-left: 15px; }
         .logo span { color: #ff5722; }
-        .hero { margin-top: 20px; padding: 50px 20px; text-align: center; border-radius: 8px; background: linear-gradient(rgba(18,18,20,0.85), rgba(18,18,20,0.95)), url('https://unsplash.com') center/cover no-repeat; border: 1px solid #2c2c35; }
-        .hero h1 { font-size: 2rem; margin-bottom: 10px; text-shadow: 0 2px 4px rgba(0,0,0,0.8); }
-        .hero p { color: #e0e0e0; font-size: 1.1rem; margin-bottom: 20px; text-shadow: 0 1px 3px rgba(0,0,0,0.8); }
+        .hero { margin-top: 20px; padding: 50px 20px; text-align: center; border-radius: 8px; background: linear-gradient(45deg, #1a1a1e 25%, transparent 25%), linear-gradient(-45deg, #1a1a1e 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #1a1a1e 75%), linear-gradient(-45deg, transparent 75%, #1a1a1e 75%); background-size: 20px 20px; background-color: #141416; border: 1px solid #2c2c35; position: relative; }
+        .hero::before { content: ""; position: absolute; top:0; left:0; right:0; bottom:0; background: rgba(255,87,34,0.05); border-radius: 8px; }
+        .hero-content { position: relative; z-index: 2; }
+        .hero h1 { font-size: 2rem; margin-bottom: 10px; color: #ffffff; }
+        .hero p { color: #9e9e9e; font-size: 1.1rem; margin-bottom: 20px; }
         .yandex-maps-btn { display: inline-block; background-color: #ff5722; color: #ffffff !important; text-decoration: none !important; padding: 18px 36px; font-weight: bold; font-size: 1.2rem; border-radius: 6px; margin: 20px 0; text-transform: uppercase; letter-spacing: 0.5px; border: none; text-align: center; box-shadow: 0 4px 15px rgba(255, 87, 34, 0.4); }
         .yandex-maps-btn:hover { background-color: #f4511e; }
         .title { font-size: 1.5rem; margin: 35px 0 15px 0; border-left: 4px solid #ff5722; padding-left: 10px; }
@@ -38,9 +40,11 @@
     </header>
     <div class="container">
         <section class="hero">
-            <h1>Качественный шиномонтаж в Перми</h1>
-            <p>г. Пермь, ул. Чкалова, 15 | Работаем ежедневно до 18:00</p>
-            <a href="https://yandex.ru" target="_blank" class="yandex-maps-btn">Открыть Яндекс Карты</a>
+            <div class="hero-content">
+                <h1>Качественный шиномонтаж в Перми</h1>
+                <p>г. Пермь, ул. Чкалова, 15 | Работаем ежедневно до 18:00</p>
+                <a href="https://yandex.ru" class="yandex-maps-btn">Открыть Яндекс Карты</a>
+            </div>
         </section>
         <h2 class="title">Комплексный переобув (4 колеса)</h2>
         <div class="table-box">
@@ -53,29 +57,77 @@
                     <tr><td>Диаметр R15-16</td><td><strong>2 400 ₽</strong></td></tr>
                     <tr><td>Диаметр R17-19</td><td><strong>2 720 ₽</strong></td></tr>
                     <tr><td>1 класс (Ширина > 215 мм)</td><td><strong>3 000 ₽</strong></td></tr>
-                    <tr><td>2 класс (Ширина > 244 мм)</td><td><strong>3 680 ₽</strong></td></tr>
+                    <tr><td>2 класс (Ширина > 245 мм)</td><td><strong>3 680 ₽</strong></td></tr>
                 </tbody>
             </table>
         </div>
-                <h2 class="title">Ремонт автомобильных шин и камер, сезонное хранение</h2>
+        <h2 class="title">Ремонт автомобильных шин</h2>
         <div class="grid">
             <div class="card">
-                <div class="card-top"><h4>Установка жгута / Камерная латка</h4><div class="price">300 ₽</div></div>
-                <p>Устранение мелких проколов или ремонт камер.</p>
+                <div class="card-top"><h4>Установка жгута</h4><div class="price">300 ₽</div></div>
+                <p>Устранение проколов в протекторе до 6 мм. Время работы: до 20 минут.</p>
             </div>
             <div class="card">
                 <div class="card-top"><h4>Универсальная латка</h4><div class="price">450 ₽</div></div>
-                <p>Ремонт небольших и средних повреждений.</p>
+                <p>Ремонт небольших и средних повреждений боковых и плечевых зон колеса.</p>
             </div>
             <div class="card">
+                <div class="card-top"><h4>Установка грибка</h4><div class="price">550 ₽</div></div>
+                <p>Профессиональный ремонт проколов протектора диаметром до 11 мм.</p>
+            </div>
+            <div class="card">
+                <div class="card-top"><h4>Термопластырь</h4><div class="price">1 200 ₽</div></div>
+                <p>Надёжное устранение сложных «грыж» в боковой или протекторной зоне каркаса.</p>
+            </div>
+            <div class="card">
+                <div class="card-top"><h4>Вулканизация резиной</h4><div class="price">1 200 ₽</div></div>
+                <p>Специальная термическая процедура для устранения наружных дефектов.</p>
+            </div>
+            <div class="card">
+                <div class="card-top"><h4>Варка шины</h4><div class="price">2 200 ₽</div></div>
+                <p>Горячий ремонт крупных боковых порезов и разрывов шины до 50 мм.</p>
+            </div>
+        </div>
+
+        <h2 class="title">Ремонт и продажа автокамер DolleX</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="card-top"><h4>Камерная латка</h4><div class="price">300 ₽</div></div>
+                <p>Качественный ремонт проколов и мелких порезов автомобильных камер.</p>
+            </div>
+            <div class="card">
+                <div class="card-top"><h4>Замена вентиля</h4><div class="price">350 ₽</div></div>
+                <p>Варка нового вентиля взамен полностью оторванного или дефектного.</p>
+            </div>
+            <div class="card">
+                <div class="card-top"><h4>Камера R13 / R14</h4><div class="price">900 / 1 000 ₽</div></div>
+                <p>Новые фирменные резиновые камеры DolleX в наличии на боксе.</p>
+            </div>
+            <div class="card">
+                <div class="card-top"><h4>Камера R15 / R16</h4><div class="price">1 200 / 1 400 ₽</div></div>
+                <p>Новые износостойкие резиновые камеры DolleX под большие диаметры.</p>
+            </div>
+        </div>
+
+        <h2 class="title">Сезонное хранение и диски</h2>
+        <div class="grid">
+            <div class="card">
                 <div class="card-top"><h4>Сезонное хранение шин</h4><div class="price">4 000 ₽</div></div>
-                <p>Хранение комплекта колес на полгода на специальном складе.</p>
+                <p>Хранение комплекта колес на полгода (сезон) по ГОСТ Р 54266-2010.</p>
+            </div>
+            <div class="card">
+                <div class="card-top"><h4>Герметик бортов диска</h4><div class="price">200 ₽</div></div>
+                <p>Ликвидация постепенной утечки воздуха в месте посадки шины на диск.</p>
+            </div>
+            <div class="card">
+                <div class="card-top"><h4>Ошиповка шин (1 шт.)</h4><div class="price">18 ₽</div></div>
+                <p>Установка качественных ремонтных шипов в штатные заводские отверстия.</p>
             </div>
         </div>
     </div>
 
     <footer>
-        <p>© 2026 Шиномонтаж на ул. Чкалова, 15. Профиль организации на <a href="https://yandex.ru" target="_blank">Яндекс Картах</a></p>
+        <p>© 2026 Шиномонтаж на ул. Чкалова, 15. Ссылка на карты: <a href="https://yandex.ru">Профиль организации</a></p>
     </footer>
 </body>
 </html>
