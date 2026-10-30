@@ -11,25 +11,10 @@
         header { background-color: #1a1a1e; padding: 15px 0; border-bottom: 2px solid #ff5722; display: flex; justify-content: space-between; align-items: center; }
         .logo { font-size: 1.4rem; font-weight: bold; padding-left: 15px; }
         .logo span { color: #ff5722; }
-        
-        /* ОБНОВЛЕННЫЙ БАННЕР С КРУТЫМ ПРЕМИУМ-ФОНОМ */
-        .hero { 
-            margin-top: 20px; 
-            padding: 60px 20px; 
-            text-align: center; 
-            border-radius: 8px; 
-            background: linear-gradient(180deg, rgba(18,18,20,0.7) 0%, rgba(18,18,20,0.95) 100%), 
-                        url('https://githubusercontent.com') center/cover no-repeat,
-                        url('https://unsplash.com') center/cover no-repeat; 
-            border: 1px solid #2c2c35; 
-        }
-        
+        .hero { margin-top: 20px; padding: 60px 20px; text-align: center; border-radius: 8px; background: linear-gradient(180deg, rgba(18,18,20,0.4) 0%, rgba(18,18,20,0.9) 100%), url('https://githubusercontent.com') center/cover no-repeat; border: 1px solid #2c2c35; }
         .hero h1 { font-size: 2.2rem; margin-bottom: 10px; font-weight: bold; text-shadow: 0 2px 4px rgba(0,0,0,0.9); }
         .hero p { color: #d1d1d1; font-size: 1.2rem; margin-bottom: 25px; text-shadow: 0 1px 3px rgba(0,0,0,0.9); }
-        
         .yandex-maps-btn { display: inline-block; background-color: #ff5722; color: #ffffff !important; text-decoration: none !important; padding: 18px 36px; font-weight: bold; font-size: 1.2rem; border-radius: 6px; text-transform: uppercase; letter-spacing: 0.5px; box-shadow: 0 4px 15px rgba(255, 87, 34, 0.4); }
-        .yandex-maps-btn:hover { background-color: #f4511e; }
-        
         .title { font-size: 1.5rem; margin: 35px 0 15px 0; border-left: 4px solid #ff5722; padding-left: 10px; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; }
         .card { background-color: #1a1a1e; border: 1px solid #2c2c35; padding: 15px; border-radius: 6px; }
@@ -42,8 +27,7 @@
         th { color: #9e9e9e; font-size: 0.85rem; text-transform: uppercase; }
         td strong { color: #ff5722; }
         footer { background-color: #0c0c0e; border-top: 2px solid #2c2c35; padding: 40px 0; margin-top: 60px; text-align: center; }
-        footer p { color: #9e9e9e; font-size: 0.95rem; }
-        footer a { color: #ff5722; text-decoration: underline; font-weight: bold; font-size: 1.05rem; }
+        footer a { color: #ff5722; text-decoration: underline; font-weight: bold; }
     </style>
 </head>
 <body>
@@ -65,9 +49,9 @@
                     <tr><th>Размер / Класс авто</th><th>Стоимость комплекса</th></tr>
                 </thead>
                 <tbody>
-                    <tr><td>Диаметр R13-14</td><td><strong>2 000 ₽</strong></td></tr>
-                    <tr><td>Диаметр R15-16</td><td><strong>2 400 ₽</strong></td></tr>
-                    <tr><td>Диаметр R17-19</td><td><strong>2 720 ₽</strong></td></tr>
+                    <tr><td>Диаметр колес R13-14</td><td><strong>2 000 ₽</strong></td></tr>
+                    <tr><td>Диаметр колес R15-16</td><td><strong>2 400 ₽</strong></td></tr>
+                    <tr><td>Диаметр колес R17-19</td><td><strong>2 720 ₽</strong></td></tr>
                     <tr><td>1 класс (Ширина &gt; 215 мм)</td><td><strong>3 000 ₽</strong></td></tr>
                     <tr><td>2 класс (Ширина &gt; 245 мм)</td><td><strong>3 680 ₽</strong></td></tr>
                 </tbody>
@@ -77,11 +61,11 @@
         <div class="grid">
             <div class="card">
                 <div class="card-top"><h4>Установка жгута</h4><div class="price">300 ₽</div></div>
-                <p>Устранение мелких проколов в протекторе до 6 мм. Время работы: до 20 минут.</p>
+                <p>Устранение проколов в протекторе до 6 мм. Время работы: до 20 минут.</p>
             </div>
             <div class="card">
                 <div class="card-top"><h4>Универсальная латка</h4><div class="price">450 ₽</div></div>
-                <p>Ремонт небольших и средних повреждений боковых и плечевых зон колеса.</p>
+                <p>Ремонт мелких и средних повреждений боковых и плечевых зон колеса.</p>
             </div>
             <div class="card">
                 <div class="card-top"><h4>Установка грибка</h4><div class="price">550 ₽</div></div>
@@ -89,7 +73,7 @@
             </div>
             <div class="card">
                 <div class="card-top"><h4>Термопластырь</h4><div class="price">1 200 ₽</div></div>
-                <p>Надёжное устранение сложных «грыж» в боковой или протекторной зоне каркаса.</p>
+                <p>Надёжное устранение сложных «грыж» в любой зоне каркаса.</p>
             </div>
             <div class="card">
                 <div class="card-top"><h4>Вулканизация резиной</h4><div class="price">1 200 ₽</div></div>
@@ -141,7 +125,7 @@
     <footer>
         <div class="container">
             <p style="margin-bottom: 10px;">Электронный прайс-лист мастерской. Все цены актуальны.</p>
-            <p>Открыть официальный профиль организации: <a href="https://yandex.ru" target="_blank">Яндекс Карты (Чкалова, 15)</a></p>
+            <p>© 2026 Шиномонтаж на ул. Чкалова, 15. Профессиональный прототип сайта под ключ.</p>
         </div>
     </footer>
 </body>
