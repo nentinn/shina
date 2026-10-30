@@ -13,25 +13,20 @@
         .logo span { color: #ff5722; }
         .top-phone-number { font-weight: bold; padding-right: 15px; color: #ffffff; font-size: 1.1rem; }
         
-        /* БРОНЕБОЙНЫЙ УГЛЕПЛАСТИКОВЫЙ ФОН ДЛЯ БАННЕРА */
+        /* КРАСИВЫЙ БАННЕР С РЕАЛЬНЫМ ФОТО МАСТЕРСКОЙ ВМЕСТО ПОЛОСОК */
         .hero { 
             margin-top: 20px; 
             padding: 60px 20px; 
             text-align: center; 
             border-radius: 8px; 
-            background: linear-gradient(180deg, rgba(26,26,30,0.6) 0%, rgba(18,18,20,0.95) 100%), 
-                        linear-gradient(45deg, #1c1c22 25%, transparent 25%), 
-                        linear-gradient(-45deg, #1c1c22 25%, transparent 25%), 
-                        linear-gradient(45deg, transparent 75%, #1c1c22 75%), 
-                        linear-gradient(-45deg, transparent 75%, #1c1c22 75%); 
-            background-size: 10px 10px;
-            background-color: #16161a;
+            background: linear-gradient(180deg, rgba(18,18,20,0.50) 0%, rgba(18,18,20,0.95) 100%), 
+                        url('https://unsplash.com') center/cover no-repeat;
             border: 2px solid #ff5722; 
             box-shadow: 0 0 25px rgba(255,87,34,0.15); 
         }
         
         .hero h1 { font-size: 2.2rem; margin-bottom: 10px; font-weight: bold; text-shadow: 0 2px 4px rgba(0,0,0,0.9); }
-        .hero p { color: #d1d1d1; font-size: 1.2rem; margin-bottom: 25px; text-shadow: 0 1px 3px rgba(0,0,0,0.9); }
+        .hero p { color: #ffffff; font-size: 1.2rem; margin-bottom: 25px; text-shadow: 0 1px 3px rgba(0,0,0,0.9); font-weight: 500; }
         .yandex-maps-btn { display: inline-block; background-color: #ff5722; color: #ffffff !important; text-decoration: none !important; padding: 18px 36px; font-weight: bold; font-size: 1.2rem; border-radius: 6px; text-transform: uppercase; letter-spacing: 0.5px; border: none; text-align: center; box-shadow: 0 4px 15px rgba(255, 87, 34, 0.4); }
         .yandex-maps-btn:hover { background-color: #f4511e; }
         .title { font-size: 1.6rem; margin: 40px 0 20px 0; border-left: 4px solid #ff5722; padding-left: 12px; font-weight: bold; text-transform: uppercase; }
@@ -51,6 +46,11 @@
     </style>
 </head>
 <body>
+    <header class="container">
+        <div class="logo">ШИНОМОНТАЖ<span>.</span></div>
+        <div class="top-phone-number">+7 (982) 438-03-01</div>
+    </header>
+
     <header class="container">
         <div class="logo">ШИНОМОНТАЖ<span>.</span></div>
         <div class="top-phone-number">+7 (982) 438-03-01</div>
