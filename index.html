@@ -7,33 +7,34 @@
     <style>
         :root {
             --primary: #ffc107;
-            --dark: #1e1e24;
-            --light: #f8f9fa;
-            --gray: #6c757d;
-            --card-bg: #fff;
+            --dark-bg: #111215;
+            --card-bg: #1c1d22;
+            --text-light: #f5f5f7;
+            --text-gray: #a0a5b5;
+            --border-color: #2c2d35;
         }
 
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Segoe UI', Roboto, sans-serif;
         }
 
         body {
-            background-color: var(--light);
-            color: var(--dark);
+            background-color: var(--dark-bg);
+            color: var(--text-light);
             line-height: 1.6;
         }
 
         header {
-            background-color: var(--dark);
-            color: #fff;
-            padding: 1rem 2rem;
+            background-color: rgba(17, 18, 21, 0.95);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1.2rem 2rem;
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            backdrop-filter: blur(10px);
         }
 
         .header-container {
@@ -42,41 +43,37 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
-            gap: 1rem;
         }
 
         .logo {
-            font-weight: 800;
-            font-size: 1.5rem;
+            font-weight: 900;
+            font-size: 1.6rem;
             color: var(--primary);
             text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .contacts-top {
-            text-align: right;
+            letter-spacing: 1.5px;
         }
 
         .phone {
-            font-weight: bold;
-            font-size: 1.2rem;
-            color: #fff;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--text-light);
             text-decoration: none;
+            border-bottom: 2px dashed var(--primary);
+            padding-bottom: 2px;
         }
 
-        /* Главный баннер с реальным фото автосервиса */
+        /* Главный экран в прежнем атмосферном стиле с реальным фото-панорамой */
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), 
+            background: linear-gradient(rgba(17, 18, 21, 0.5), rgba(17, 18, 21, 0.85)), 
                         url('https://yandex.ru') no-repeat center center;
             background-size: cover;
-            height: 450px;
+            height: 500px;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            color: #fff;
             padding: 0 1rem;
+            border-bottom: 1px solid var(--border-color);
         }
 
         .hero-content {
@@ -84,167 +81,153 @@
         }
 
         .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
+            font-size: 3rem;
+            margin-bottom: 1.2rem;
             text-transform: uppercase;
-            font-weight: 800;
+            font-weight: 900;
+            letter-spacing: 1px;
+            text-shadow: 0 4px 12px rgba(0,0,0,0.5);
         }
 
         .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 1.5rem;
-            color: #e0e0e0;
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            color: #d1d5db;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.5);
         }
 
         .btn {
             background-color: var(--primary);
-            color: var(--dark);
-            padding: 0.8rem 2rem;
+            color: #111;
+            padding: 1rem 2.5rem;
             border: none;
-            border-radius: 5px;
-            font-weight: bold;
-            font-size: 1rem;
+            border-radius: 4px;
+            font-weight: 800;
+            font-size: 1.1rem;
             cursor: pointer;
             text-decoration: none;
-            transition: all 0.3s ease;
-            display: inline-block;
+            transition: all 0.25s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 15px rgba(255, 193, 7, 0.3);
         }
 
         .btn:hover {
-            background-color: #e0a800;
-            transform: translateY(-2px);
+            background-color: #fff;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
         }
 
         .container {
             max-width: 1200px;
-            margin: 3rem auto;
-            padding: 0 1rem;
+            margin: 4rem auto;
+            padding: 0 1.5rem;
         }
 
         .section-title {
             text-align: center;
-            margin-bottom: 2rem;
-            font-size: 2rem;
-            position: relative;
-            padding-bottom: 0.5rem;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background-color: var(--primary);
-            border-radius: 2px;
-        }
-
-        /* Интерактивные вкладки (Табы) */
-        .tabs-container {
-            background: var(--card-bg);
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             margin-bottom: 3rem;
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            font-weight: 800;
+            letter-spacing: 1px;
         }
 
-        .tabs-header {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
+        .section-title span {
+            color: var(--primary);
         }
 
-        .tab-btn {
-            padding: 0.8rem 1.5rem;
-            background-color: #eee;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: background 0.3s;
-        }
-
-        .tab-btn.active {
-            background-color: var(--dark);
-            color: #fff;
-        }
-
-        .tab-content {
-            display: none;
-        }
-
-        .tab-content.active {
-            display: block;
-        }
-
-        .services-list {
+        /* Прежний строгий стиль сетки услуг */
+        .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-bottom: 5rem;
         }
 
         .service-card {
-            background: #fdfdfd;
-            border: 1px solid #eef0f2;
-            padding: 1.5rem;
-            border-radius: 8px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 2rem;
+            border-radius: 6px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: border-color 0.3s ease;
+        }
+
+        .service-card:hover {
+            border-color: var(--primary);
+        }
+
+        .service-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-light);
+        }
+
+        .service-info p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-bottom {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding-top: 1rem;
         }
 
-        .service-name {
-            font-weight: 600;
+        .price-label {
+            color: var(--text-gray);
+            font-size: 0.85rem;
+            text-transform: uppercase;
         }
 
-        .service-price {
-            font-weight: bold;
-            color: var(--dark);
-            background: #fff3cd;
-            padding: 0.2rem 0.6rem;
-            border-radius: 4px;
+        .price-value {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary);
         }
 
-        /* Калькулятор стоимости */
+        /* Стили калькулятора */
         .calc-box {
-            background: var(--dark);
-            color: #fff;
-            padding: 2.5rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 3rem;
+            border-radius: 8px;
+            max-width: 900px;
+            margin: 0 auto;
         }
 
         .calc-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 2.5rem;
         }
 
         .calc-group label {
             display: block;
-            margin-bottom: 0.5rem;
-            color: #ccc;
-            font-size: 0.9rem;
+            margin-bottom: 0.7rem;
+            color: var(--text-gray);
+            font-size: 0.85rem;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 1px;
         }
 
         .calc-group select {
             width: 100%;
-            padding: 0.8rem;
-            border-radius: 5px;
-            border: 1px solid #444;
-            background-color: #2a2a30;
-            color: #fff;
+            padding: 1rem;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            background-color: var(--dark-bg);
+            color: var(--text-light);
             font-size: 1rem;
             outline: none;
+            transition: border-color 0.3s;
         }
 
         .calc-group select:focus {
@@ -254,115 +237,74 @@
         .checkbox-group {
             display: flex;
             flex-direction: column;
-            gap: 0.8rem;
+            gap: 1rem;
         }
 
         .checkbox-label {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.7rem;
             cursor: pointer;
-            color: #eee;
+            color: var(--text-light);
+            font-size: 1rem;
         }
 
         .checkbox-label input {
-            width: 18px;
-            height: 18px;
+            width: 20px;
+            height: 20px;
             accent-color: var(--primary);
+            cursor: pointer;
         }
 
         .calc-result {
             text-align: center;
-            border-top: 1px solid #444;
-            padding-top: 1.5rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 2rem;
         }
 
         .calc-result h3 {
-            font-size: 1.2rem;
-            color: #ccc;
+            font-size: 1.1rem;
+            color: var(--text-gray);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .total-price {
-            font-size: 2.5rem;
+            font-size: 3.5rem;
             color: var(--primary);
-            font-weight: 800;
+            font-weight: 900;
             margin: 0.5rem 0;
         }
 
-        /* Подвал */
         footer {
-            background-color: var(--dark);
-            color: #fff;
-            padding: 3rem 1rem 1.5rem 1rem;
-            margin-top: 5rem;
-        }
-
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-about h3, .footer-contacts h3 {
-            color: var(--primary);
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-            font-size: 1.1rem;
-        }
-
-        .footer-contacts p {
-            margin-bottom: 0.5rem;
-            color: #ccc;
-        }
-
-        .maps-btn {
-            background-color: #24242a;
-            border: 1px solid var(--primary);
-            color: var(--primary);
+            background-color: #0b0c0e;
+            border-top: 1px solid var(--border-color);
+            padding: 4rem 1.5rem 2rem 1.5rem;
+            margin-top: 6rem;
             text-align: center;
-            padding: 0.8rem;
-            border-radius: 5px;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            margin-top: 0.5rem;
-            width: 100%;
         }
 
-        .maps-btn:hover {
-            background-color: var(--primary);
-            color: var(--dark);
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto 2rem auto;
+        }
+
+        .footer-content p {
+            color: var(--text-gray);
+            margin-bottom: 0.5rem;
         }
 
         .copyright {
-            text-align: center;
-            border-top: 1px solid #333;
-            padding-top: 1.5rem;
-            color: #6c757d;
+            color: #555;
             font-size: 0.9rem;
+            border-top: 1px solid rgba(255,255,255,0.02);
+            padding-top: 1.5rem;
         }
 
         @media (max-width: 768px) {
-            .header-container {
-                flex-direction: column;
-                text-align: center;
-            }
-            .contacts-top {
-                text-align: center;
-            }
-            .hero h1 {
-                font-size: 1.8rem;
-            }
-            .hero {
-                height: 350px;
-            }
+            .hero h1 { font-size: 2.2rem; }
+            .hero p { font-size: 1.1rem; }
+            .calc-box { padding: 1.5rem; }
         }
     </style>
 </head>
@@ -370,21 +312,39 @@
 
     <header>
         <div class="header-container">
-            <div class="logo">ШиноЭксперт</div>
-            <div class="contacts-top">
-                <a href="tel:+73420000000" class="phone">ул. Чкалова, 15</a>
-            </div>
+            <div class="logo">Чкалова, 15</div>
+            <a href="https://yandex.ru" target="_blank" class="phone">Мы на картах Яндекса</a>
         </div>
     </header>
 
     <section class="hero">
         <div class="hero-content">
-            <h1>Качественный шиномонтаж в Перми</h1>
-            <p>Профессиональное обслуживание колес, ремонт проколов и балансировка на современном оборудовании</p>
+            <h1>Профессиональный Шиномонтаж</h1>
+            <p>Честный сервис и надежное обслуживание колес на улице Чкалова</p>
             <a href="#calculator" class="btn">Рассчитать стоимость</a>
         </div>
     </section>
 
     <main class="container">
         
-        <!-- Секция Услуг -->
+        <!-- Прежние оригинальные услуги -->
+        <h2 class="section-title">Наши <span>Услуги</span></h2>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-info">
+                    <h3>Камерная латка</h3>
+                    <p>Профессиональное устранение проколов и порезов ремонтными латками высокой прочности с применением метода холодной вулканизации.</p>
+                </div>
+                <div class="service-bottom">
+                    <span class="price-label">Стоимость</span>
+                    <span class="price-value">200 ₽</span>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-info">
+                    <h3>Замена вентиля на камере</h3>
+                    <p>Демонтаж старого изношенного или поврежденного ниппеля и установка нового герметичного вентиля для удержания давления.</p>
+                </div>
+                <div class="service-bottom">
