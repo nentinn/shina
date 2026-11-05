@@ -3,171 +3,388 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Шиномонтаж на Чкалова, 15 в Перми</title>
+    <title>Шиномонтаж на Чкалова, 15 | Пермь</title>
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
-        body { background-color: #121214; color: #ffffff; line-height: 1.6; }
-        .container { max-width: 1000px; margin: 0 auto; padding: 0 15px; }
-        header { background-color: #1a1a1e; padding: 15px 0; border-bottom: 2px solid #ff5722; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.4rem; font-weight: bold; padding-left: 15px; text-transform: uppercase; letter-spacing: 1px; }
-        .logo span { color: #ff5722; }
-        .top-phone-number { font-weight: bold; padding-right: 15px; color: #ffffff; font-size: 1.1rem; }
-        .hero { margin-top: 20px; padding: 60px 20px; text-align: center; border-radius: 8px; background: linear-gradient(135deg, #1f1f24 0%, #121214 100%); border: 2px solid #ff5722; box-shadow: 0 0 25px rgba(255,87,34,0.15); }
-        .hero h1 { font-size: 2.2rem; margin-bottom: 10px; font-weight: bold; }
-        .hero p { color: #d1d1d1; font-size: 1.2rem; margin-bottom: 25px; }
-        .yandex-maps-btn { display: inline-block; background-color: #ff5722; color: #ffffff !important; text-decoration: none !important; padding: 18px 36px; font-weight: bold; font-size: 1.2rem; border-radius: 6px; text-transform: uppercase; letter-spacing: 0.5px; border: none; text-align: center; box-shadow: 0 4px 15px rgba(255, 87, 34, 0.4); }
-        .title { font-size: 1.6rem; margin: 40px 0 20px 0; border-left: 4px solid #ff5722; padding-left: 12px; font-weight: bold; text-transform: uppercase; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .card { background-color: #1a1a1e; border: 1px solid #2c2c35; padding: 20px; border-radius: 8px; display: flex; flex-direction: column; justify-content: space-between; }
-        .card-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; gap: 10px; }
-        .card-top h4 { font-size: 1.1rem; font-weight: bold; color: #ffffff; }
-        .price { color: #ff5722; font-size: 1.25rem; white-space: nowrap; font-weight: bold; }
-        .card p { font-size: 0.9rem; color: #a0a0a5; }
-        .table-box { background-color: #1a1a1e; border: 1px solid #2c2c35; border-radius: 8px; padding: 20px; overflow-x: auto; }
-        table { width: 100%; border-collapse: collapse; }
-        th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #2c2c35; }
-        th { color: #9e9e9e; font-size: 0.9rem; text-transform: uppercase; }
-        td strong { color: #ff5722; font-size: 1.15rem; }
-        footer { background-color: #0c0c0e; border-top: 2px solid #2c2c35; padding: 40px 0; margin-top: 60px; text-align: center; }
-        footer p { color: #9e9e9e; font-size: 0.95rem; }
+        :root {
+            --primary: #ffc107;
+            --dark: #1e1e24;
+            --light: #f8f9fa;
+            --gray: #6c757d;
+            --card-bg: #fff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--dark);
+            color: #fff;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .contacts-top {
+            text-align: right;
+        }
+
+        .phone {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Главный баннер с реальным фото автосервиса */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), 
+                        url('https://yandex.ru') no-repeat center center;
+            background-size: cover;
+            height: 450px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            padding: 0 1rem;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            color: #e0e0e0;
+        }
+
+        .btn {
+            background-color: var(--primary);
+            color: var(--dark);
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1rem;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background-color: #e0a800;
+            transform: translateY(-2px);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary);
+            border-radius: 2px;
+        }
+
+        /* Интерактивные вкладки (Табы) */
+        .tabs-container {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 3rem;
+        }
+
+        .tabs-header {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            padding: 0.8rem 1.5rem;
+            background-color: #eee;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: background 0.3s;
+        }
+
+        .tab-btn.active {
+            background-color: var(--dark);
+            color: #fff;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .services-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .service-card {
+            background: #fdfdfd;
+            border: 1px solid #eef0f2;
+            padding: 1.5rem;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+
+        .service-name {
+            font-weight: 600;
+        }
+
+        .service-price {
+            font-weight: bold;
+            color: var(--dark);
+            background: #fff3cd;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+        }
+
+        /* Калькулятор стоимости */
+        .calc-box {
+            background: var(--dark);
+            color: #fff;
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+
+        .calc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .calc-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #ccc;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .calc-group select {
+            width: 100%;
+            padding: 0.8rem;
+            border-radius: 5px;
+            border: 1px solid #444;
+            background-color: #2a2a30;
+            color: #fff;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        .calc-group select:focus {
+            border-color: var(--primary);
+        }
+
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            color: #eee;
+        }
+
+        .checkbox-label input {
+            width: 18px;
+            height: 18px;
+            accent-color: var(--primary);
+        }
+
+        .calc-result {
+            text-align: center;
+            border-top: 1px solid #444;
+            padding-top: 1.5rem;
+        }
+
+        .calc-result h3 {
+            font-size: 1.2rem;
+            color: #ccc;
+        }
+
+        .total-price {
+            font-size: 2.5rem;
+            color: var(--primary);
+            font-weight: 800;
+            margin: 0.5rem 0;
+        }
+
+        /* Подвал */
+        footer {
+            background-color: var(--dark);
+            color: #fff;
+            padding: 3rem 1rem 1.5rem 1rem;
+            margin-top: 5rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-about h3, .footer-contacts h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            font-size: 1.1rem;
+        }
+
+        .footer-contacts p {
+            margin-bottom: 0.5rem;
+            color: #ccc;
+        }
+
+        .maps-btn {
+            background-color: #24242a;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+            text-align: center;
+            padding: 0.8rem;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            margin-top: 0.5rem;
+            width: 100%;
+        }
+
+        .maps-btn:hover {
+            background-color: var(--primary);
+            color: var(--dark);
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #333;
+            padding-top: 1.5rem;
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .contacts-top {
+                text-align: center;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .hero {
+                height: 350px;
+            }
+        }
     </style>
 </head>
 <body>
-    <header class="container">
-        <div class="logo">ШИНОМОНТАЖ<span>.</span></div>
-        <div class="top-phone-number">+7 (982) 438-03-01</div>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">ШиноЭксперт</div>
+            <div class="contacts-top">
+                <a href="tel:+73420000000" class="phone">ул. Чкалова, 15</a>
+            </div>
+        </div>
     </header>
-    <div class="container">
-        <section class="hero">
+
+    <section class="hero">
+        <div class="hero-content">
             <h1>Качественный шиномонтаж в Перми</h1>
-            <p>г. Пермь, ул. Чкалова, 15 | Работаем ежедневно до 18:00</p>
-            <a href="https://yandex.ru" target="_blank" class="yandex-maps-btn">Открыть Яндекс Карты</a>
-        </section>
+            <p>Профессиональное обслуживание колес, ремонт проколов и балансировка на современном оборудовании</p>
+            <a href="#calculator" class="btn">Рассчитать стоимость</a>
+        </div>
+    </section>
+
+    <main class="container">
         
-        <h2 class="title">Комплексный переобув (4 колеса)</h2>
-        <div class="table-box">
-            <table>
-                <thead>
-                    <tr><th>Размер / Класс автомобиля</th><th>Стоимость комплекса</th></tr>
-                </thead>
-                <tbody>
-                    <tr><td>Переобув, диаметр колес R13-14</td><td><strong>2 000 ₽</strong></td></tr>
-                    <tr><td>Переобув, диаметр колес R15-16</td><td><strong>2 400 ₽</strong></td></tr>
-                    <tr><td>Переобув, диаметр колес R17-19</td><td><strong>2 720 ₽</strong></td></tr>
-                    <tr><td>1 класс (Ширина профиля шины более 215 мм)</td><td><strong>3 000 ₽</strong></td></tr>
-                    <tr><td>2 класс (Ширина профиля шины более 245 мм)</td><td><strong>3 680 ₽</strong></td></tr>
-                </tbody>
-            </table>
-        </div>
-        <h2 class="title">Ремонт автомобильных шин и камер</h2>
-        <div class="grid">
-            <div class="card"><div class="card-top"><h4>Установка жгута / Установка грибка</h4><div class="price">300 - 550 ₽</div></div><p>Быстрое устранение проколов и профессиональный ремонт.</p></div>
-            <div class="card"><div class="card-top"><h4>Ремонт камер и дисков</h4><div class="price">от 200 ₽</div></div><p>Латка, замена вентиля, герметик бортов диска.</p></div>
-            <div class="card"><div class="card-top"><h4>Сезонное хранение шин</h4><div class="price">4 000 ₽</div></div><p>Правильное хранение комплекта колес по ГОСТ.</p></div>
-        </div>
-    </div>
-
-    <footer>
-        <div class="container">
-            <p style="margin-bottom: 10px;">Электронный прайс-лист мастерской. Полный код и все позиции доступны в исходных файлах проекта.</p>
-            <p>© 2026 Шиномонтаж на ул. Чкалова, 15. Профессиональный прототип сайта под ключ.</p>
-        </div>
-    </footer>
-</body>
-</html>
-        <h2 class="title">Ремонт автомобильных шин</h2>
-        <div class="grid">
-            <div class="card">
-                <div class="card-top"><h4>Установка жгута</h4><div class="price">300 ₽</div></div>
-                <p>Жгут устанавливается в протекторную часть шины в отверстие диаметром не более 6 мм. Время ремонта — до 20 минут. Быстрое и надежное устранение мелких проколов прямо в пути.</p>
-            </div>
-            <div class="card">
-                <div class="card-top"><h4>Универсальная латка</h4><div class="price">450 ₽</div></div>
-                <p>Универсальные латки применяются для качественного долговечного ремонта небольших повреждений, проколов, а также мелких дефектов в боковых и плечевых зонах автомобильного колеса.</p>
-            </div>
-            <div class="card">
-                <div class="card-top"><h4>Установка грибка</h4><div class="price">550 ₽</div></div>
-                <p>Гриб устанавливается в протекторную часть шины с предельным размером повреждения до 11 мм. Обеспечивает полную герметичность и восстанавливает прочность каркаса. Время ремонта — до 40 минут.</p>
-            </div>
-            <div class="card">
-                <div class="card-top"><h4>Термопластырь</h4><div class="price">1 200 ₽</div></div>
-                <p>Высокотехнологичный горячий ремонт, предназначенный для надежного устранения сложных радиальных и диагональных «грыж» в боковой, плечевой или протекторной зоне каркаса шины.</p>
-            </div>
-            <div class="card">
-                <div class="card-top"><h4>Вулканизация сырой резиной</h4><div class="price">1 200 ₽</div></div>
-                <p>Специализированная термическая процедура под давлением, используемая для профессионального бесследного устранения наружных косметических и структурных дефектов покрышки.</p>
-            </div>
-            <div class="card">
-                <div class="card-top"><h4>Варка шины</h4><div class="price">2 200 ₽</div></div>
-                <p>Сложный многоэтапный горячий ремонт крупных боковых порезов, разрывов текстильного корда и сквозных повреждений шины в протекторной или плечевой части (размер дефектов до 50 мм).</p>
-            </div>
-        </div>
-        <h2 class="title">Ремонт и продажа автокамер</h2>
-        <div class="grid">
-            <div class="card">
-                <div class="card-top"><h4>Камерная латка</h4><div class="price">300 ₽</div></div>
-                <p>Камерные латки применяются при профессиональном ремонте автомобильных камер. Гарантируют восстановление эластичности и герметичности камеры после прокола. Время работы — до 35 минут.</p>
-            </div>
-            <div class="card">
-                <div class="card-top"><h4>Замена вентиля на камере</h4><div class="price">350 ₽</div></div>
-                <p>Вулканизация нового прочного вентиля на подложке применяется в случае механического повреждения, старения резины или полного отрыва старого соска камеры. Время работы — до 35 минут.</p>
-            </div>
-            <div class="card">
-                <div class="card-top"><h4>Камера R13 (DolleX)</h4><div class="price">900 ₽</div></div>
-                <p>Камера автомобильная, 13 диаметр. Новая фирменная резиновая камера DolleX для колес радиуса R13. Отличается высокой плотностью резины и стойкостью к износу.</p>
-            </div>
-            <div class="card">
-                <div class="card-top"><h4>Камера R14 / R15 / R16</h4><div class="price">1000 - 1400 ₽</div></div>
-                <p>Новые износостойкие резиновые камеры DolleX автомобильные под соответствующие диаметры колес (14, 15 и 16 радиусы). Все ходовые размеры всегда есть в наличии на боксе.</p>
-            </div>
-        </div>
-        <h2 class="title">Сезонное хранение и ремонт дисков</h2>
-        <div class="grid">
-            <div class="card">
-                <div class="card-top"><h4>Герметик бортов диска</h4><div class="price">200 ₽</div></div>
-                <p>Специальный состав применяется в случае постепенной утечки воздуха в посадочном месте диск-шина из-за неровностей или коррозии полки диска автомобильного колеса. Время ремонта — до 15 минут.</p>
-            </div>
-            <div class="card">
-                <div class="card-top"><h4>Сезонное хранение шин</h4><div class="price">4 000 ₽</div></div>
-                <p>Правильное полугодовое хранение комплекта автомобильных шин или колес в сборе на специализированном сухом складе строго по правилам и техническим регламентам ГОСТ Р 54266-2010.</p>
-            </div>
-            <div class="card">
-                <div class="card-top"><h4>Поштучная ошиповка резины</h4><div class="price">18 ₽ / шт.</div></div>
-                <p>Вторичная ошиповка зимней резины. Надежные ремонтные шипы с широким фланцем устанавливаются взамен выпавших строго в штатные заводские отверстия протектора.</p>
-            </div>
-        </div>
-    </div>
-
-    <footer>
-        <div class="container">
-            <p style="margin-bottom: 10px;">Электронный прайс-лист мастерской. Все цены и услуги актуальны.</p>
-            <p>© 2026 Шиномонтаж на ул. Чкалова, 15. Профессиональный прототип сайта под ключ.</p>
-        </div>
-    </footer>
-</body>
-</html>
-        <h2 class="title">Сезонное хранение и ремонт дисков</h2>
-        <div class="grid">
-            <div class="card">
-                <div class="card-top"><h4>Герметик бортов диска</h4><div class="price">200 ₽</div></div>
-                <p>Специальный состав применяется в случае постепенной утечки воздуха в посадочном месте диск-шина из-за неровностей или коррозии полки диска автомобильного колеса. Время ремонта — до 15 минут.</p>
-            </div>
-            <div class="card">
-                <div class="card-top"><h4>Сезонное хранение шин</h4><div class="price">4 000 ₽</div></div>
-                <p>Правильное полугодовое хранение комплекта автомобильных шин или колес в сборе на специализированном сухом складе строго по правилам и техническим регламентам ГОСТ Р 54266-2010.</p>
-            </div>
-            <div class="card">
-                <div class="card-top"><h4>Поштучная ошиповка резины</h4><div class="price">18 ₽ / шт.</div></div>
-                <p>Вторичная ошиповка зимней резины. Надежные ремонтные шипы с широким фланцем устанавливаются взамен выпавших строго в штатные заводские отверстия протектора.</p>
-            </div>
-        </div>
-    </div>
-
-    <footer>
-        <div class="container">
-            <p style="margin-bottom: 10px;">Электронный прайс-лист мастерской. Все цены и услуги актуальны.</p>
-            <p>© 2026 Шиномонтаж на ул. Чкалова, 15. Профессиональный прототип сайта под ключ.</p>
-        </div>
-    </footer>
-</body>
-</html>
+        <!-- Секция Услуг -->
