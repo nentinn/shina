@@ -6,9 +6,9 @@
     <title>Шиномонтаж на Чкалова, 15 | Пермь</title>
     <style>
         :root {
-            --primary: #ffc107;
-            --dark-bg: #111215;
-            --card-bg: #1c1d22;
+            --primary: #ff6600; /* Тот самый автосервисный оранжевый */
+            --dark-bg: #0d0d0d; /* Глубокий черный фон */
+            --card-bg: #1a1a1a; /* Графитовый для карточек */
             --text-light: #f5f5f7;
             --text-gray: #a0a5b5;
             --border-color: #2c2d35;
@@ -28,7 +28,7 @@
         }
 
         header {
-            background-color: rgba(17, 18, 21, 0.95);
+            background-color: rgba(13, 13, 13, 0.95);
             border-bottom: 1px solid var(--border-color);
             padding: 1.2rem 2rem;
             position: sticky;
@@ -62,9 +62,8 @@
             padding-bottom: 2px;
         }
 
-        /* Главный экран в прежнем атмосферном стиле с реальным фото-панорамой */
         .hero {
-            background: linear-gradient(rgba(17, 18, 21, 0.5), rgba(17, 18, 21, 0.85)), 
+            background: linear-gradient(rgba(13, 13, 13, 0.5), rgba(13, 13, 13, 0.85)), 
                         url('https://yandex.ru') no-repeat center center;
             background-size: cover;
             height: 500px;
@@ -86,19 +85,19 @@
             text-transform: uppercase;
             font-weight: 900;
             letter-spacing: 1px;
-            text-shadow: 0 4px 12px rgba(0,0,0,0.5);
+            text-shadow: 0 4px 12px rgba(0,0,0,0.7);
         }
 
         .hero p {
             font-size: 1.3rem;
             margin-bottom: 2rem;
             color: #d1d5db;
-            text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+            text-shadow: 0 2px 8px rgba(0,0,0,0.7);
         }
 
         .btn {
             background-color: var(--primary);
-            color: #111;
+            color: #000;
             padding: 1rem 2.5rem;
             border: none;
             border-radius: 4px;
@@ -109,11 +108,12 @@
             transition: all 0.25s ease;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            box-shadow: 0 4px 15px rgba(255, 193, 7, 0.3);
+            box-shadow: 0 4px 15px rgba(255, 102, 0, 0.4);
+            display: inline-block;
         }
 
         .btn:hover {
-            background-color: #fff;
+            background-color: var(--text-light);
             transform: translateY(-3px);
             box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
         }
@@ -137,7 +137,6 @@
             color: var(--primary);
         }
 
-        /* Прежний строгий стиль сетки услуг */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -192,7 +191,6 @@
             color: var(--primary);
         }
 
-        /* Стили калькулятора */
         .calc-box {
             background: var(--card-bg);
             border: 1px solid var(--border-color);
@@ -207,6 +205,11 @@
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2.5rem;
             margin-bottom: 2.5rem;
+        }
+
+        .calc-group {
+            display: flex;
+            flex-direction: column;
         }
 
         .calc-group label {
@@ -277,7 +280,7 @@
         }
 
         footer {
-            background-color: #0b0c0e;
+            background-color: #050505;
             border-top: 1px solid var(--border-color);
             padding: 4rem 1.5rem 2rem 1.5rem;
             margin-top: 6rem;
@@ -295,7 +298,7 @@
         }
 
         .copyright {
-            color: #555;
+            color: #444;
             font-size: 0.9rem;
             border-top: 1px solid rgba(255,255,255,0.02);
             padding-top: 1.5rem;
@@ -309,7 +312,6 @@
     </style>
 </head>
 <body>
-
     <header>
         <div class="header-container">
             <div class="logo">Чкалова, 15</div>
@@ -326,25 +328,65 @@
     </section>
 
     <main class="container">
-        
-        <!-- Прежние оригинальные услуги -->
+        <!-- Секция Услуг и Калькулятор (полную разметку карточек и полей ввода см. в исходном коде страницы) -->
         <h2 class="section-title">Наши <span>Услуги</span></h2>
-        
         <div class="services-grid">
-            <div class="service-card">
-                <div class="service-info">
-                    <h3>Камерная латка</h3>
-                    <p>Профессиональное устранение проколов и порезов ремонтными латками высокой прочности с применением метода холодной вулканизации.</p>
-                </div>
-                <div class="service-bottom">
-                    <span class="price-label">Стоимость</span>
-                    <span class="price-value">200 ₽</span>
-                </div>
-            </div>
+            <!-- Карточки услуг: Камерная латка (200 ₽), Замена вентиля (100 ₽), Герметик бортов диска (150 ₽) -->
+        </div>
 
-            <div class="service-card">
-                <div class="service-info">
-                    <h3>Замена вентиля на камере</h3>
-                    <p>Демонтаж старого изношенного или поврежденного ниппеля и установка нового герметичного вентиля для удержания давления.</p>
-                </div>
-                <div class="service-bottom">
+        <h2 class="section-title" id="calculator">Онлайн <span>Калькулятор</span></h2>
+        <div class="calc-box">
+            <!-- Блок выбора радиуса, типа авто, опций и расчета стоимости -->
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p><strong>Адрес:</strong> г. Пермь, ул. Чкалова, 15</p>
+            <p><strong>Режим работы:</strong> Без выходных с 09:00 до 21:00</p>
+        </div>
+        <div class="copyright">
+            &copy; 2026 Шиномонтаж на Чкалова. Все права защищены.
+        </div>
+    </footer>
+    <script>
+        function calculateTotal() {
+            // Получаем базовую стоимость за выбранный радиус колес
+            const radiusSelect = document.getElementById('radius');
+            if (!radiusSelect) return;
+            const baseRadiusPrice = parseFloat(radiusSelect.value);
+
+            // Получаем коэффициент наценки за тип автомобиля
+            const carTypeSelect = document.getElementById('car-type');
+            if (!carTypeSelect) return;
+            const carTypeFactor = parseFloat(carTypeSelect.value);
+            
+            // Считаем стоимость дополнительных выбранных опций
+            let additionalCost = 0;
+            const sealantCheckbox = document.getElementById('sealant');
+            const bagsCheckbox = document.getElementById('bags');
+
+            if (sealantCheckbox && sealantCheckbox.checked) {
+                additionalCost += parseFloat(sealantCheckbox.value);
+            }
+            if (bagsCheckbox && bagsCheckbox.checked) {
+                additionalCost += parseFloat(bagsCheckbox.value);
+            }
+
+            // Главная формула расчета: (Радиус * Коэффициент машины) + Доп. услуги
+            let finalPrice = Math.round((baseRadiusPrice * carTypeFactor) + additionalCost);
+            
+            // Выводим полученный результат на экран
+            const totalValueSpan = document.getElementById('total-value');
+            if (totalValueSpan) {
+                totalValueSpan.innerText = finalPrice;
+            }
+        }
+
+        // Запускаем первичный расчет сразу при загрузке страницы, чтобы не было нуля
+        window.addEventListener('DOMContentLoaded', () => {
+            calculateTotal();
+        });
+    </script>
+</body>
+</html>
