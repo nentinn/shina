@@ -1,5 +1,10 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Шиномонтаж на Чкалова, 15</title>
-<meta name="claude:viewport-fit-sides" content="cover">
+
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap">
 <style>
 /* Layout: one column for the customer, two columns (requests | schedule) for the owner.
@@ -196,7 +201,7 @@ a{color:inherit}
 .toast[hidden]{display:none}
 a.btn{text-decoration:none;display:inline-block;text-align:center}
 .cta{position:relative;display:flex;gap:10px;flex-wrap:wrap}
-select{width:100%;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px}
+select{font:inherit;width:100%;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px}
 .calc{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:14px}
 .calc-out{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .calc-out b{font-family:var(--font-display);font-weight:600;font-size:38px;line-height:1;color:var(--accent-text);font-variant-numeric:tabular-nums}
@@ -218,7 +223,9 @@ select{width:100%;background:var(--surface);border:1px solid var(--line);border-
   .svc,.day,.time,.chip,.slot{transition:background-color .12s,border-color .12s}
 }
 </style>
-
+<style>html{-webkit-text-size-adjust:100%}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
 <header class="top wrap">
   <a class="brand" href="#client" aria-label="Шиномонтаж">
     <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="4 2.2"/><circle cx="12" cy="12" r="3.4" fill="currentColor"/></svg>
@@ -695,3 +702,5 @@ renderPrices();
 renderAll();
 })();
 </script>
+</body>
+</html>
